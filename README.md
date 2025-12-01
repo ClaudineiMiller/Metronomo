@@ -2,7 +2,7 @@
 
 
 Um metrônomo profissional desenvolvido para guitarristas, com interface intuitiva e funcionalidades avançadas para treino rítmico. Totalmente funcional offline como Progressive Web App (PWA).
-<p>Acesse o site: <a>https://claudineimiller.github.io/Metronomo/Metronomo-pwa/</a>Metronomo-pwa</p>
+<p>Acesse o site: <a>https://claudineimiller.github.io/Metronomo/Metronomo-pwa/</a></p>
 
 ## ✨ Características
 
