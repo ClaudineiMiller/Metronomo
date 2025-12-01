@@ -1,0 +1,89 @@
+{
+  "name": "Metrônomo para Guitarra",
+  "short_name": "Metrônomo",
+  "description": "Metrônomo profissional para prática de guitarra - Controle preciso de BPM, compassos e figuras rítmicas",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a2a6c",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["music", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Metrônomo para Guitarra - Visão geral"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Iniciar Metrônomo",
+      "short_name": "Iniciar",
+      "description": "Iniciar o metrônomo com configurações padrão",
+      "url": "./index.html?action=start",
+      "icons": [{ "src": "icons/play-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Configurações Rápidas",
+      "short_name": "Config",
+      "description": "Abrir configurações do metrônomo",
+      "url": "./index.html?action=settings",
+      "icons": [{ "src": "icons/settings-icon.png", "sizes": "96x96" }]
+    }
+  ]
+}
