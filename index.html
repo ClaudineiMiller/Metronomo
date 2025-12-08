@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adicionar estas linhas no <head> -->
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Metrônomo">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+
+    <title>Metrônomo para Guitarra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Metrônomo para Guitarra</h1>
+            <p class="subtitle">Treine subdivisões rítmicas com precisão</p>
+            <button class="theme-toggle" id="theme-toggle">
+                <span>🌙</span> Tema
+            </button>
+        </header>
+
+        <div class="controls">
+            <div class="bpm-control">
+                <h2>Velocidade (BPM)</h2>
+                <div class="bpm-display">100</div>
+                <input type="range" min="40" max="240" value="100" class="bpm-slider">
+                <div class="slider-labels">
+                    <span>Lento</span>
+                    <span>Rápido</span>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-start" id="start-btn" title="Espaço">
+                        <span class="material-icons" style="font-size:2em;">play_arrow</span>
+                    </button>
+                        <button class="btn btn-stop" id="stop-btn" title="Espaço">
+                        <span class="material-icons" style="font-size:2em;">stop</span>
+                    </button>
+                    <button class="btn btn-reset" id="reset-btn" title="R">
+                        <span class="material-icons" style="font-size:2em;">restart_alt</span>
+                    </button>
+                </div>
+
+                <div class="visualizer">
+                    <div class="pulse"></div>
+                    <div class="measures-container" id="measures-container"></div>
+                </div>
+            </div>
+
+            <div class="rhythm-control">
+                <h3>Figuras Rítmicas</h3>
+                <div class="rhythm-options">
+                    <button class="rhythm-btn" data-division="1">
+                        <span class="rhythm-icon">𝅝</span>
+                        Semibreve
+                    </button>
+                    <button class="rhythm-btn" data-division="2">
+                        <span class="rhythm-icon">𝅗𝅥</span>
+                        Mínima
+                    </button>
+                    <button class="rhythm-btn active" data-division="4">
+                        <span class="rhythm-icon">𝅘𝅥</span>
+                        Semínima
+                    </button>
+                    <button class="rhythm-btn" data-division="8">
+                        <span class="rhythm-icon">𝅘𝅥𝅮</span>
+                        Colcheia
+                    </button>
+                    <button class="rhythm-btn" data-division="16">
+                        <span class="rhythm-icon">𝅘𝅥𝅯</span>
+                        Semicolcheia
+                    </button>
+                    <button class="rhythm-btn" data-division="32">
+                        <span class="rhythm-icon">𝅘𝅥𝅰</span>
+                        Fusa
+                    </button>
+                </div>
+
+                <div class="time-control">
+                    <div class="time-section">
+                        <h3>Compasso</h3>
+                        <div class="time-options">
+                            <button class="time-btn" data-beats="2">2/4</button>
+                            <button class="time-btn" data-beats="3">3/4</button>
+                            <button class="time-btn active" data-beats="4">4/4</button>
+                            <button class="time-btn" data-beats="5">5/4</button>
+                            <button class="time-btn" data-beats="6">6/8</button>
+                            <button class="time-btn" data-beats="7">7/8</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <h3 class="presets-title">Estilos Musicais</h3>
+                <div class="presets">
+                    <button class="preset-btn" data-bpm="60">Lento</button>
+                    <button class="preset-btn" data-bpm="80">Adagio</button>
+                    <button class="preset-btn active" data-bpm="100">Moderato</button>
+                    <button class="preset-btn" data-bpm="120">Allegro</button>
+                    <button class="preset-btn" data-bpm="140">Vivace</button>
+                    <button class="preset-btn" data-bpm="160">Presto</button>
+                    <button class="preset-btn" data-bpm="180">Prestíssimo</button>
+                    <button class="preset-btn" data-bpm="200">Máximo</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Metrônomo para guitarristas - &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
