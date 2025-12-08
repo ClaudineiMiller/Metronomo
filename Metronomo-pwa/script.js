@@ -27,6 +27,11 @@ const elements = {
     themeToggle: document.getElementById('theme-toggle')
 };
 
+// Garante que o botão Parar fique oculto ao carregar
+if (elements.stopBtn) {
+    elements.stopBtn.style.display = 'none';
+}
+
 // Contexto de áudio
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -42,9 +47,12 @@ const defaultConfig = {
 // Inicialização
 function init() {
     setupEventListeners();
-    setupKeyboardShortcuts(); // ← NOVA LINHA
+    setupKeyboardShortcuts();
     applyDefaultConfig();
     updateMeasureIndicators();
+    // Inicializa visibilidade dos botões
+    elements.startBtn.style.display = '';
+    elements.stopBtn.style.display = 'none';
 }
 
 // Configuração padrão
@@ -286,8 +294,8 @@ function startMetronome() {
     if (state.isPlaying) return;
     
     state.isPlaying = true;
-    elements.startBtn.disabled = true;
-    elements.stopBtn.disabled = false;
+    elements.startBtn.style.display = 'none';
+    elements.stopBtn.style.display = '';
     
     const interval = (60 / state.bpm) * (4 / state.division) * (1 / state.subdivisionsPerBeat) * 1000;
     
@@ -304,8 +312,8 @@ function stopMetronome() {
     if (!state.isPlaying) return;
     
     state.isPlaying = false;
-    elements.startBtn.disabled = false;
-    elements.stopBtn.disabled = true;
+    elements.startBtn.style.display = '';
+    elements.stopBtn.style.display = 'none';
     
     clearInterval(state.timerId);
     resetVisualIndicators();
@@ -325,8 +333,8 @@ function resetMetronome() {
     updateMeasureIndicators();
     
     // CORREÇÃO: Garantir que os botões voltem ao estado inicial
-    elements.startBtn.disabled = false;
-    elements.stopBtn.disabled = true;
+    elements.startBtn.style.display = '';
+    elements.stopBtn.style.display = 'none';
 }
 
 // Resetar indicadores visuais
